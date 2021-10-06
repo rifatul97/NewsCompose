@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Smart News</string>
+    <string name="network_error_message">network not found</string>
+</resources>
