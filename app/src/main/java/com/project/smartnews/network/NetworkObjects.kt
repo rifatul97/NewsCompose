@@ -9,6 +9,8 @@ sealed class Result {
 
     data class Failure(
         val status: String,
+        val code: String,
+        val message: String
     ) : Result()
 }
 

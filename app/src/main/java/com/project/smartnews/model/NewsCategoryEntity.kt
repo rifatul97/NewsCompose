@@ -7,10 +7,13 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "userCategorySelected")
 data class NewsCategoryEntity (
 
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "categoryId")
-    val categoryId: Long,
+    val categoryId: Int,
 
     @ColumnInfo(name = "categoryName")
-    val categoryName: String
+    val categoryName: String,
+
+    @ColumnInfo(name = "categorySelected")
+    val categorySelected: Boolean,
 )

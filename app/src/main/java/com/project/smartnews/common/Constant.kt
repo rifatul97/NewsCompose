@@ -8,6 +8,8 @@ object Constants {
 
     const val API_KEY = "e8ccb3616dbb4973865bfec7be98fe7f"
 
-    const val DEFAULT_COUNTRY = "country=us"
+    const val DEFAULT_COUNTRY = "us"
+
+    val dataProvider = listOf<String>("CNN", "Fox News", "The Verge")
 
 }

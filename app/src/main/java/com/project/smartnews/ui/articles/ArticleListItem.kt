@@ -1,6 +1,8 @@
-package com.project.smartnews.ui
+package com.project.smartnews.ui.articles
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,25 +15,29 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import coil.size.OriginalSize
 import coil.size.Scale
 import com.project.smartnews.model.ArticleEntity
 
+@OptIn(ExperimentalCoilApi::class)
 @Composable
 fun ArticleListItem(
     article: ArticleEntity,
     onItemClick: (ArticleEntity) -> Unit
 ) {
 
-    Card(modifier = Modifier
+    Card(
+        border = BorderStroke(1.dp, androidx.compose.ui.graphics.Color.Black),
+        modifier = Modifier
         .height(100.dp)
         .wrapContentSize()
         .clip(RoundedCornerShape(8.dp))
         .clickable {
-            onItemClick
-            println("Clicked ${article.title}")
+            onItemClick.invoke(article)
         }
+
     ) {
         Row(modifier = Modifier.fillMaxWidth()/*.clickable {  }*/, horizontalArrangement = Arrangement.SpaceBetween) {
 
@@ -43,14 +49,13 @@ fun ArticleListItem(
                     text = article.title,
                     style = MaterialTheme.typography.subtitle2,
                     modifier = Modifier.weight(0.8f)
-                )//, modifier = Modifier.padding(start = 8.dp, top = 8.dp))
-                //Spacer(Modifier.height(16.dp))
+                )
                 Text(
                     text = article.sourceName,
                     style = MaterialTheme.typography.caption,
                     modifier = Modifier.weight(0.2f),
                     textAlign = TextAlign.End
-                )//, , modifier = Modifier.padding(start = 8.dp, bottom = 24.dp))
+                )
             }
 
             Image(
@@ -62,7 +67,7 @@ fun ArticleListItem(
                     }
                 ),
                 contentDescription = "Picture",
-                modifier = Modifier.weight(0.34f),
+                modifier = Modifier.weight(0.34f).border(BorderStroke(1.dp, androidx.compose.ui.graphics.Color.Transparent)),
                 contentScale = ContentScale.FillHeight
             )
         }
