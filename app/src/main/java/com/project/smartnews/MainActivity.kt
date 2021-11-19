@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.accompanist.pager.ExperimentalPagerApi
-import com.project.smartnews.ui.SmartNewsApp
+import com.project.smartnews.ui.NewsComposeApp
 import com.project.smartnews.ui.theme.SmartNewsTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    SmartNewsApp()
+                    NewsComposeApp()
                 }
             }
         }
@@ -44,5 +44,5 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    //SmartNewsApp()
+    //NewsComposeApp()
 }

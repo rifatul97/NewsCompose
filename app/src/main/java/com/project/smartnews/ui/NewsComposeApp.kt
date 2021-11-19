@@ -18,7 +18,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @Composable
-fun SmartNewsApp() {
+fun NewsComposeApp() {
     val articleListState = rememberLazyListState()
     val pagerState = rememberPagerState(pageCount = 6, initialPage = 0)
     val scaffoldState = rememberScaffoldState()
@@ -27,7 +27,7 @@ fun SmartNewsApp() {
 
 
     SmartNewsTheme() {
-        SmartNewsNavGraph(
+        NewsComposeNavGraph(
             articleListState = articleListState,
             pagerState = pagerState,
             scaffoldState = scaffoldState,

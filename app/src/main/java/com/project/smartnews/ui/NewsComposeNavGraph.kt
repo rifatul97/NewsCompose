@@ -33,7 +33,7 @@ import com.project.smartnews.ui.user.UserScreenViewModel
 
 @OptIn(ExperimentalPagerApi::class, kotlinx.coroutines.ExperimentalCoroutinesApi::class)
 @Composable
-fun SmartNewsNavGraph(
+fun NewsComposeNavGraph(
     articleListViewModel: ArticleListViewModel = viewModel(),
     articleDetailViewModel: ArticleDetailViewModel = viewModel(),
     searchScreenViewModel: SearchScreenViewModel = viewModel(),
