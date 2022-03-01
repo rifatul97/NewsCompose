@@ -1,7 +1,16 @@
 # News Compose
+insert line
+  
+## Description  
+insert line
 News Compose is a application for the android system built Jetpack Compose library using The News DB API. Also fetching data from the network and integrating persisted data in the database via repository pattern.
 
+# Features
+insert line
+
 ## Tech stack & Open-source libraries
+insert line
+
 Minimum SDK level 21
 100% Kotlin based + Coroutines + Flow for asynchronous.
 Hilt for dependency injection.
@@ -21,6 +30,11 @@ Retrofit2 & OkHttp3 - construct the REST APIs and paging network data.
 Sandwich - construct lightweight http API response and handling error responses.
 WhatIf - checking nullable object and empty collections more fluently.
 Timber - logging.
+
+# MVVM Architecture
+TODO
+
+# MAD Score
 
 ## How to build on your environment
 Add your <url=?>The Movie DB's API</url> key in local.properties file.
